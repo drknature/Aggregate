@@ -11,10 +11,12 @@ import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 
+
 public class MainActivity extends AppCompatActivity {
     private static final String TAG = "MyActivity";
     private FirebaseAuth mAuth;
     private FirebaseAuth.AuthStateListener mAuthListener;
+    private DatabaseReference mDatabase;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -35,12 +37,14 @@ public class MainActivity extends AppCompatActivity {
                 // ...
             }
         };
-
+/*
         FirebaseDatabase database = FirebaseDatabase.getInstance();
-        DatabaseReference myRef = database.getReference("message");
 
-        myRef.setValue("Hello, World!");
-
+        DatabaseReference myRef = database.getReference("aggregate-23ea3");
+        DatabaseReference ref = myRef.push();
+        ref.setValue('1','2');
+*/
+        mDatabase = FirebaseDatabase.getInstance().getReference();
 
     }
 
