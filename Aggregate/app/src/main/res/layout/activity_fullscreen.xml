@@ -15,7 +15,7 @@
         android:gravity="center"/>
 
 
-    <ImageButton
+<!--    <ImageButton
         android:id="@+id/imageButton"
         android:layout_marginBottom="65dp"
         android:layout_marginLeft="40dp"
@@ -26,7 +26,7 @@
         android:adjustViewBounds="true"
         android:background="@android:color/transparent"
         android:layout_alignParentBottom="true"
-        android:layout_centerHorizontal="true" />
+        android:layout_centerHorizontal="true" /> -->
 
     <ImageButton
         android:layout_width="wrap_content"
@@ -37,9 +37,12 @@
         android:scaleType="fitCenter"
         android:adjustViewBounds="true"
         android:background="@android:color/transparent"
-        android:layout_above="@+id/imageButton"
+        android:layout_below="@+id/imageView"
         android:layout_centerHorizontal="true"
-        android:layout_marginBottom="35dp" />
+        android:layout_marginBottom="5dp"
+        android:layout_alignParentBottom="true"
+
+        />
 
     <ImageView
         android:layout_width="wrap_content"

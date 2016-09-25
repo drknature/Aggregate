@@ -25,7 +25,7 @@
     <string name="message_zoom_touch_expand">Touch a photo to expand it.</string>
 
     <string name="app_name">Aggregate</string>
-    <string name="Q1">On a a scale of 0 (not at all) to 5 (very severely/often), how stressed do you feel this week?</string>
+    <string name="Q1">On a a scale of 0 to 5, how stressed do you feel this week?</string>
     <string name="Q2">How anxious do you feel?</string>
     <string name="Q3">How worried about the future do you feel?</string>
     <string name="Q4">How depressed do you feel?</string>
@@ -34,18 +34,18 @@
     <string name="Q7">How often do you fall asleep in class?</string>
     <string name="Q8">How often do you pull all-nighters?</string>
     <string name="Q9">How inactive (not exercising) are you?</string>
-    <string name="Q10">Is your exercise low-intensity/effort? (5 being no exercise, 0 being most intense) </string>
+    <string name="Q10">Is your exercise low-intensity/effort?</string>
     <string name="Q11">Do you eat inconsistently?</string>
-    <string name="Q12">Did your weight increase? (0 being not at all, 5 being drastically)</string>
+    <string name="Q12">Did your weight increase? (0 being not at all)</string>
     <string name="Q13">Did your weight decrease?</string>
     <string name="Q14">Are your relationships with others (friends, family, romantic) unstable?</string>
-    <string name="Q15">How much of your time do you spend alone? (5 being never hanging out with others)</string>
-    <string name="Q16">Do you spend all your time on class (0 being spending much of your time on outside hobbies/activities, 5 being spending all your time on class)</string>
+    <string name="Q15">How much of your time do you spend alone?</string>
+    <string name="Q16">Do you spend all your time on class?</string>
     <string name="Q17">How bored by/uninterested in the class material are you?</string>
     <string name="Q18">Do you feel that what you\'re learning doesn\'t matter?</string>
     <string name="Q19">How difficult do you find the class?</string>
     <string name="Q20">Do you feel that the class moves too fast?</string>
     <string name="Q21">Was the workload in this class demanding?</string>
-    <string name="Q22">Thanks for participating! Data successfully sent! Close app. </string>
+    <string name="Q22">Thanks for participating! Data successfully sent! Close app.</string>
 
 </resources>

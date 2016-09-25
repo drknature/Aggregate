@@ -1,6 +1,8 @@
 package com.example.moveover.aggregate;
 
 import android.app.Fragment;
+import android.graphics.Color;
+import android.graphics.Typeface;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.LayoutInflater;
@@ -45,6 +47,7 @@ public class ScreenSlidePageFragment extends Fragment {
 
     SeekBar seek;
     TextView scale;
+    TextView desc;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -55,150 +58,213 @@ public class ScreenSlidePageFragment extends Fragment {
 
         // Set the title view to show the page number.
         if (mPageNumber == 0) {
-            ((TextView) rootView.findViewById(android.R.id.text1)).setText(
-                    "Question " + (mPageNumber + 1) + "/" + (Scrolling.NUM_PAGES)
-                            + "\n" + getResources().getString(R.string.Q1)
+            TextView text1a = (TextView) rootView.findViewById(android.R.id.text1);
+            TextView text1b = (TextView) rootView.findViewById(R.id.textView12);
+            text1a.setText(
+                    "QUESTION " + (mPageNumber + 1) + "/" + (Scrolling.NUM_PAGES)
             );
+            text1a.setTypeface(null, Typeface.BOLD);
+            text1b.setText(getResources().getString(R.string.Q1));
         }
 
         if (mPageNumber == 1) {
-            ((TextView) rootView.findViewById(android.R.id.text1)).setText(
-                    "Question " + (mPageNumber + 1) + "/" + (Scrolling.NUM_PAGES)
-                            + "\n" + getResources().getString(R.string.Q2)
+            TextView text1a = (TextView) rootView.findViewById(android.R.id.text1);
+            TextView text1b = (TextView) rootView.findViewById(R.id.textView12);
+            text1a.setText(
+                    "QUESTION " + (mPageNumber + 1) + "/" + (Scrolling.NUM_PAGES)
             );
+            text1a.setTypeface(null, Typeface.BOLD);
+            text1b.setText(getResources().getString(R.string.Q2));
         }
 
         if (mPageNumber == 2) {
-            ((TextView) rootView.findViewById(android.R.id.text1)).setText(
-                    "Question " + (mPageNumber + 1) + "/" + (Scrolling.NUM_PAGES)
-                            + "\n" + getResources().getString(R.string.Q3)
+            TextView text1a = (TextView) rootView.findViewById(android.R.id.text1);
+            TextView text1b = (TextView) rootView.findViewById(R.id.textView12);
+            text1a.setText(
+                    "QUESTION " + (mPageNumber + 1) + "/" + (Scrolling.NUM_PAGES)
             );
+            text1a.setTypeface(null, Typeface.BOLD);
+            text1b.setText(getResources().getString(R.string.Q3));
         }
 
         if (mPageNumber == 3) {
-            ((TextView) rootView.findViewById(android.R.id.text1)).setText(
-                    "Question " + (mPageNumber + 1) + "/" + (Scrolling.NUM_PAGES)
-                            + "\n" + getResources().getString(R.string.Q4)
+            TextView text1a = (TextView) rootView.findViewById(android.R.id.text1);
+            TextView text1b = (TextView) rootView.findViewById(R.id.textView12);
+            text1a.setText(
+                    "QUESTION " + (mPageNumber + 1) + "/" + (Scrolling.NUM_PAGES)
             );
+            text1a.setTypeface(null, Typeface.BOLD);
+            text1b.setText(getResources().getString(R.string.Q4));
         }
 
         if (mPageNumber == 4) {
-            ((TextView) rootView.findViewById(android.R.id.text1)).setText(
-                    "Question " + (mPageNumber + 1) + "/" + (Scrolling.NUM_PAGES)
-                            + "\n" + getResources().getString(R.string.Q5)
+            TextView text1a = (TextView) rootView.findViewById(android.R.id.text1);
+            TextView text1b = (TextView) rootView.findViewById(R.id.textView12);
+            text1a.setText(
+                    "QUESTION " + (mPageNumber + 1) + "/" + (Scrolling.NUM_PAGES)
             );
+            text1a.setTypeface(null, Typeface.BOLD);
+            text1b.setText(getResources().getString(R.string.Q5));
         }
 
         if (mPageNumber == 5) {
-            ((TextView) rootView.findViewById(android.R.id.text1)).setText(
-                    "Question " + (mPageNumber + 1) + "/" + (Scrolling.NUM_PAGES)
-                            + "\n" + getResources().getString(R.string.Q6)
+            TextView text1a = (TextView) rootView.findViewById(android.R.id.text1);
+            TextView text1b = (TextView) rootView.findViewById(R.id.textView12);
+            text1a.setText(
+                    "QUESTION " + (mPageNumber + 1) + "/" + (Scrolling.NUM_PAGES)
             );
+            text1a.setTypeface(null, Typeface.BOLD);
+            text1b.setText(getResources().getString(R.string.Q6));
         }
 
         if (mPageNumber == 6) {
-            ((TextView) rootView.findViewById(android.R.id.text1)).setText(
-                    "Question " + (mPageNumber + 1) + "/" + (Scrolling.NUM_PAGES)
-                            + "\n" + getResources().getString(R.string.Q7)
+            TextView text1a = (TextView) rootView.findViewById(android.R.id.text1);
+            TextView text1b = (TextView) rootView.findViewById(R.id.textView12);
+            text1a.setText(
+                    "QUESTION " + (mPageNumber + 1) + "/" + (Scrolling.NUM_PAGES)
             );
+            text1a.setTypeface(null, Typeface.BOLD);
+            text1b.setText(getResources().getString(R.string.Q7));
         }
 
         if (mPageNumber == 7) {
-            ((TextView) rootView.findViewById(android.R.id.text1)).setText(
-                    "Question " + (mPageNumber + 1) + "/" + (Scrolling.NUM_PAGES)
-                            + "\n" + getResources().getString(R.string.Q8)
+            TextView text1a = (TextView) rootView.findViewById(android.R.id.text1);
+            TextView text1b = (TextView) rootView.findViewById(R.id.textView12);
+            text1a.setText(
+                    "QUESTION " + (mPageNumber + 1) + "/" + (Scrolling.NUM_PAGES)
             );
+            text1a.setTypeface(null, Typeface.BOLD);
+            text1b.setText(getResources().getString(R.string.Q8));
         }
 
         if (mPageNumber == 8) {
-            ((TextView) rootView.findViewById(android.R.id.text1)).setText(
-                    "Question " + (mPageNumber + 1) + "/" + (Scrolling.NUM_PAGES)
-                            + "\n" + getResources().getString(R.string.Q9)
+            TextView text1a = (TextView) rootView.findViewById(android.R.id.text1);
+            TextView text1b = (TextView) rootView.findViewById(R.id.textView12);
+            text1a.setText(
+                    "QUESTION " + (mPageNumber + 1) + "/" + (Scrolling.NUM_PAGES)
             );
+            text1a.setTypeface(null, Typeface.BOLD);
+            text1b.setText(getResources().getString(R.string.Q9));
         }
 
         if (mPageNumber == 9) {
-            ((TextView) rootView.findViewById(android.R.id.text1)).setText(
-                    "Question " + (mPageNumber + 1) + "/" + (Scrolling.NUM_PAGES)
-                            + "\n" + getResources().getString(R.string.Q10)
+            TextView text1a = (TextView) rootView.findViewById(android.R.id.text1);
+            TextView text1b = (TextView) rootView.findViewById(R.id.textView12);
+            text1a.setText(
+                    "QUESTION " + (mPageNumber + 1) + "/" + (Scrolling.NUM_PAGES)
             );
+            text1a.setTypeface(null, Typeface.BOLD);
+            text1b.setText(getResources().getString(R.string.Q10));
         }
 
         if (mPageNumber == 10) {
-            ((TextView) rootView.findViewById(android.R.id.text1)).setText(
-                    "Question " + (mPageNumber + 1) + "/" + (Scrolling.NUM_PAGES)
-                            + "\n" + getResources().getString(R.string.Q11)
+            TextView text1a = (TextView) rootView.findViewById(android.R.id.text1);
+            TextView text1b = (TextView) rootView.findViewById(R.id.textView12);
+            text1a.setText(
+                    "QUESTION " + (mPageNumber + 1) + "/" + (Scrolling.NUM_PAGES)
             );
+            text1a.setTypeface(null, Typeface.BOLD);
+            text1b.setText(getResources().getString(R.string.Q11));
         }
 
         if (mPageNumber == 11) {
-            ((TextView) rootView.findViewById(android.R.id.text1)).setText(
-                    "Question " + (mPageNumber + 1) + "/" + (Scrolling.NUM_PAGES)
-                            + "\n" + getResources().getString(R.string.Q12)
+            TextView text1a = (TextView) rootView.findViewById(android.R.id.text1);
+            TextView text1b = (TextView) rootView.findViewById(R.id.textView12);
+            text1a.setText(
+                    "QUESTION " + (mPageNumber + 1) + "/" + (Scrolling.NUM_PAGES)
             );
+            text1a.setTypeface(null, Typeface.BOLD);
+            text1b.setText(getResources().getString(R.string.Q12));
         }
 
         if (mPageNumber == 12) {
-            ((TextView) rootView.findViewById(android.R.id.text1)).setText(
-                    "Question " + (mPageNumber + 1) + "/" + (Scrolling.NUM_PAGES)
-                            + "\n" + getResources().getString(R.string.Q13)
+            TextView text1a = (TextView) rootView.findViewById(android.R.id.text1);
+            TextView text1b = (TextView) rootView.findViewById(R.id.textView12);
+            text1a.setText(
+                    "QUESTION " + (mPageNumber + 1) + "/" + (Scrolling.NUM_PAGES)
             );
+            text1a.setTypeface(null, Typeface.BOLD);
+            text1b.setText(getResources().getString(R.string.Q13));
         }
 
         if (mPageNumber == 13) {
-            ((TextView) rootView.findViewById(android.R.id.text1)).setText(
-                    "Question " + (mPageNumber + 1) + "/" + (Scrolling.NUM_PAGES)
-                            + "\n" + getResources().getString(R.string.Q14)
+            TextView text1a = (TextView) rootView.findViewById(android.R.id.text1);
+            TextView text1b = (TextView) rootView.findViewById(R.id.textView12);
+            text1a.setText(
+                    "QUESTION " + (mPageNumber + 1) + "/" + (Scrolling.NUM_PAGES)
             );
+            text1a.setTypeface(null, Typeface.BOLD);
+            text1b.setText(getResources().getString(R.string.Q14));
         }
 
         if (mPageNumber == 14) {
-            ((TextView) rootView.findViewById(android.R.id.text1)).setText(
-                    "Question " + (mPageNumber + 1) + "/" + (Scrolling.NUM_PAGES)
-                            + "\n" + getResources().getString(R.string.Q15)
+            TextView text1a = (TextView) rootView.findViewById(android.R.id.text1);
+            TextView text1b = (TextView) rootView.findViewById(R.id.textView12);
+            text1a.setText(
+                    "QUESTION " + (mPageNumber + 1) + "/" + (Scrolling.NUM_PAGES)
             );
+            text1a.setTypeface(null, Typeface.BOLD);
+            text1b.setText(getResources().getString(R.string.Q15));
         }
 
         if (mPageNumber == 15) {
-            ((TextView) rootView.findViewById(android.R.id.text1)).setText(
-                    "Question " + (mPageNumber + 1) + "/" + (Scrolling.NUM_PAGES)
-                            + "\n" + getResources().getString(R.string.Q16)
+            TextView text1a = (TextView) rootView.findViewById(android.R.id.text1);
+            TextView text1b = (TextView) rootView.findViewById(R.id.textView12);
+            text1a.setText(
+                    "QUESTION " + (mPageNumber + 1) + "/" + (Scrolling.NUM_PAGES)
             );
+            text1a.setTypeface(null, Typeface.BOLD);
+            text1b.setText(getResources().getString(R.string.Q16));
         }
 
         if (mPageNumber == 16) {
-            ((TextView) rootView.findViewById(android.R.id.text1)).setText(
-                    "Question " + (mPageNumber + 1) + "/" + (Scrolling.NUM_PAGES)
-                            + "\n" + getResources().getString(R.string.Q17)
+            TextView text1a = (TextView) rootView.findViewById(android.R.id.text1);
+            TextView text1b = (TextView) rootView.findViewById(R.id.textView12);
+            text1a.setText(
+                    "QUESTION " + (mPageNumber + 1) + "/" + (Scrolling.NUM_PAGES)
             );
+            text1a.setTypeface(null, Typeface.BOLD);
+            text1b.setText(getResources().getString(R.string.Q17));
         }
 
         if (mPageNumber == 17) {
-            ((TextView) rootView.findViewById(android.R.id.text1)).setText(
-                    "Question " + (mPageNumber + 1) + "/" + (Scrolling.NUM_PAGES)
-                            + "\n" + getResources().getString(R.string.Q18)
+            TextView text1a = (TextView) rootView.findViewById(android.R.id.text1);
+            TextView text1b = (TextView) rootView.findViewById(R.id.textView12);
+            text1a.setText(
+                    "QUESTION " + (mPageNumber + 1) + "/" + (Scrolling.NUM_PAGES)
             );
+            text1a.setTypeface(null, Typeface.BOLD);
+            text1b.setText(getResources().getString(R.string.Q18));
         }
 
         if (mPageNumber == 18) {
-            ((TextView) rootView.findViewById(android.R.id.text1)).setText(
-                    "Question " + (mPageNumber + 1) + "/" + (Scrolling.NUM_PAGES)
-                            + "\n" + getResources().getString(R.string.Q19)
+            TextView text1a = (TextView) rootView.findViewById(android.R.id.text1);
+            TextView text1b = (TextView) rootView.findViewById(R.id.textView12);
+            text1a.setText(
+                    "QUESTION " + (mPageNumber + 1) + "/" + (Scrolling.NUM_PAGES)
             );
+            text1a.setTypeface(null, Typeface.BOLD);
+            text1b.setText(getResources().getString(R.string.Q19));
         }
 
         if (mPageNumber == 19) {
-            ((TextView) rootView.findViewById(android.R.id.text1)).setText(
-                    "Question " + (mPageNumber + 1) + "/" + (Scrolling.NUM_PAGES)
-                            + "\n" + getResources().getString(R.string.Q20)
+            TextView text1a = (TextView) rootView.findViewById(android.R.id.text1);
+            TextView text1b = (TextView) rootView.findViewById(R.id.textView12);
+            text1a.setText(
+                    "QUESTION " + (mPageNumber + 1) + "/" + (Scrolling.NUM_PAGES)
             );
+            text1a.setTypeface(null, Typeface.BOLD);
+            text1b.setText(getResources().getString(R.string.Q20));
         }
 
         if (mPageNumber == 20) {
-            ((TextView) rootView.findViewById(android.R.id.text1)).setText(
-                    "Question " + (mPageNumber + 1) + "/" + (Scrolling.NUM_PAGES)
-                            + "\n" + getResources().getString(R.string.Q21)
+            TextView text1a = (TextView) rootView.findViewById(android.R.id.text1);
+            TextView text1b = (TextView) rootView.findViewById(R.id.textView12);
+            text1a.setText(
+                    "QUESTION " + (mPageNumber + 1) + "/" + (Scrolling.NUM_PAGES)
             );
+            text1a.setTypeface(null, Typeface.BOLD);
+            text1b.setText(getResources().getString(R.string.Q21));
         }
         if (mPageNumber == 21) {
             ((TextView) rootView.findViewById(android.R.id.text1)).setText(
@@ -211,13 +277,24 @@ public class ScreenSlidePageFragment extends Fragment {
 
         scale = (TextView) rootView.findViewById(R.id.scaling);
 
+        desc = (TextView) rootView.findViewById(R.id.description);
+
         seek.setMax(5);
 
         scale.setText(seek.getProgress() + "/" + seek.getMax());
 
         // QUESTION
+        if (mPageNumber == 21) {
+            seek.setAlpha(00);
+            scale.setAlpha(00);
+        }
 
-
+        if (mPageNumber != 21) {
+            desc.setText("Not at all");
+        } else {
+            desc.setTextColor(Color.WHITE);
+            desc.setTextSize(1);
+        }
         seek.setOnSeekBarChangeListener(
                 new SeekBar.OnSeekBarChangeListener() {
 
@@ -227,6 +304,129 @@ public class ScreenSlidePageFragment extends Fragment {
                     public void onProgressChanged(SeekBar seekBar, int progress, boolean fromUser) {
                         progressed = progress;
                         scale.setText(progress + "/" + seek.getMax());
+
+                        if (mPageNumber == 0 || mPageNumber == 1 || mPageNumber == 2 || mPageNumber == 3 ||
+                                mPageNumber == 4 || mPageNumber == 5 || mPageNumber == 6 || mPageNumber == 7 || mPageNumber == 7
+                                || mPageNumber == 7 || mPageNumber == 9 || mPageNumber == 10 || mPageNumber == 13 || mPageNumber == 16 ||
+                                mPageNumber == 18 || mPageNumber == 20 ) {
+
+                            if (progress == 0) {
+                                desc.setText("Not at all");
+                            }
+
+                            if (progress >= 1 && progress <= 4) {
+                                desc.setText("");
+                            }
+
+                            if (progress == 5) {
+                                desc.setText("Very");
+                            }
+                        }
+
+                        if (mPageNumber == 5) {
+                            if (progress == 0) {
+                                desc.setText("Not at all");
+                            }
+
+                            if (progress >= 1 && progress <= 4) {
+                                desc.setText("");
+                            }
+
+                            if (progress == 5) {
+                                desc.setText("Big problem");
+                            }
+                        }
+
+                        if (mPageNumber == 11) {
+                            if (progress == 0) {
+                                desc.setText("Not at all");
+                            }
+
+                            if (progress >= 1 && progress <= 4) {
+                                desc.setText("");
+                            }
+
+                            if (progress == 5) {
+                                desc.setText("Drastically");
+                            }
+                        }
+
+                        if (mPageNumber == 12) {
+                            if (progress == 0) {
+                                desc.setText("Not at all");
+                            }
+
+                            if (progress >= 1 && progress <= 4) {
+                                desc.setText("");
+                            }
+
+                            if (progress == 5) {
+                                desc.setText("Drastically");
+                            }
+                        }
+
+                        if (mPageNumber == 14) {
+                            if (progress == 0) {
+                                desc.setText("Not much");
+                            }
+
+                            if (progress >= 1 && progress <= 4) {
+                                desc.setText("");
+                            }
+
+                            if (progress == 5) {
+                                desc.setText("Almost all");
+                            }
+                        }
+
+                        if (mPageNumber == 15) {
+                            if (progress == 0) {
+                                desc.setText("Spend much of your time on outside hobbies/activities");
+                            }
+
+                            if (progress >= 1 && progress <= 4) {
+                                desc.setText("");
+                            }
+
+                            if (progress == 5) {
+                                desc.setText("All on class");
+                            }
+                        }
+
+                        if (mPageNumber == 17) {
+                            if (progress == 0) {
+                                desc.setText("Not at all");
+                            }
+
+                            if (progress >= 1 && progress <= 4) {
+                                desc.setText("");
+                            }
+
+                            if (progress == 5) {
+                                desc.setText("Absolutely");
+                            }
+                        }
+
+                        if (mPageNumber == 19) {
+                            if (progress == 0) {
+                                desc.setText("Not at all");
+                            }
+
+                            if (progress >= 1 && progress <= 4) {
+                                desc.setText("");
+                            }
+
+                            if (progress == 5) {
+                                desc.setText("Absolutely");
+                            }
+                        }
+
+                        if (mPageNumber == 21) {
+                            if (progress >= -1 && progress <= 5) {
+                                desc.setText("");
+                            }
+                        }
+
                         if(mPageNumber == 0) {
                             MainActivity.mySurvey.set_stress(progressed);
                         }
@@ -297,7 +497,20 @@ public class ScreenSlidePageFragment extends Fragment {
 
                     @Override
                     public void onStartTrackingTouch(SeekBar seekBar) {
+                        if (mPageNumber == 0 || mPageNumber == 1 || mPageNumber == 2 || mPageNumber == 3 ||
+                                mPageNumber == 4 || mPageNumber == 5) {
+                            if (progressed == 0) {
+                                desc.setText("Not at all");
+                            }
 
+                            if (progressed >= 1 && progressed <= 4) {
+                                desc.setText("");
+                            }
+
+                            if (progressed == 5) {
+                                desc.setText("Very");
+                            }
+                        }
                     }
 
                     @Override

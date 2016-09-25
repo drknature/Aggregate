@@ -3,6 +3,7 @@ package com.example.moveover.aggregate;
 import android.app.AlertDialog;
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.graphics.Color;
 import android.support.annotation.NonNull;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -61,6 +62,7 @@ public class MainActivity extends AppCompatActivity {
         builder.setTitle("Enter class code");
 //        builder.setMessage("Enter class code");
         input = new EditText(this);
+        input.setHint("Ex: 15-112");
         builder.setView(input);
 
         classs1 = (TextView) findViewById(R.id.class1);
