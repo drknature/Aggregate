@@ -38,7 +38,7 @@
             android:textSize="25dp"
             android:id="@+id/textView" />
 
-    <ImageButton
+<!--    <ImageButton
         android:id="@+id/addclass"
         android:layout_marginLeft="40dp"
         android:layout_width="wrap_content"
@@ -49,7 +49,7 @@
         android:background="@android:color/transparent"
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
-        android:layout_marginBottom="54dp" />
+        android:layout_marginBottom="54dp" /> -->
 
     <SeekBar
         android:layout_width="match_parent"

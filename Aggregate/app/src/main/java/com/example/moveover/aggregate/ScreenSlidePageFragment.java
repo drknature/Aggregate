@@ -8,6 +8,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.SeekBar;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import org.w3c.dom.Text;
 
@@ -199,6 +200,11 @@ public class ScreenSlidePageFragment extends Fragment {
                             + "\n" + getResources().getString(R.string.Q21)
             );
         }
+        if (mPageNumber == 21) {
+            ((TextView) rootView.findViewById(android.R.id.text1)).setText(
+                    getResources().getString(R.string.Q22)
+            );
+        }
 
 
         seek = (SeekBar) rootView.findViewById(R.id.seekBar2);
@@ -283,6 +289,9 @@ public class ScreenSlidePageFragment extends Fragment {
                         }
                         if(mPageNumber == 20) {
                             MainActivity.mySurvey.set_hours_per_week(progressed);
+                        }
+                        if(mPageNumber == 21){
+                            MainActivity.sendData();
                         }
                     }
 

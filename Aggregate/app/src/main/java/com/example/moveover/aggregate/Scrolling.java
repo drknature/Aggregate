@@ -16,7 +16,7 @@ import android.view.MenuItem;
 
 public class Scrolling extends AppCompatActivity {
 
-    public static final int NUM_PAGES = 21;
+    public static final int NUM_PAGES = 22;
 
     ViewPager mPager;
 
@@ -70,7 +70,6 @@ public class Scrolling extends AppCompatActivity {
                 // See http://developer.android.com/design/patterns/navigation.html for more.
                 NavUtils.navigateUpTo(this, new Intent(this, FullscreenActivity.class));
                 return true;
-
             case R.id.action_next:
                 // Advance to the next step in the wizard. If there is no next step, setCurrentItem
                 // will do nothing.

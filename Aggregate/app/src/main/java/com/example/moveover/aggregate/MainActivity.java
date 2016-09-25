@@ -35,8 +35,9 @@ public class MainActivity extends AppCompatActivity {
     private static final String TAG = "MyActivity";
     private FirebaseAuth mAuth;
     private FirebaseAuth.AuthStateListener mAuthListener;
-    private DatabaseReference mDatabase;
+    private static DatabaseReference mDatabase;
     public static Survey mySurvey = new Survey();
+    public static boolean dataSent = false;
 
     EditText input;
 
@@ -176,46 +177,49 @@ public class MainActivity extends AppCompatActivity {
             }
         };
     }
-    public void sendData()
-    {
-        mDatabase = FirebaseDatabase.getInstance().getReference();
-        mDatabase = mDatabase.push();//new survey
+    public static void sendData() {
+        if(!dataSent) {
+            System.out.print("pushed");
+            dataSent = true; //prevents spam
+            mDatabase = FirebaseDatabase.getInstance().getReference();
+            mDatabase = mDatabase.push();//new survey
 
-        mDatabase.child("ID").child("Date").setValue(mySurvey.getDate());
-        mDatabase.child("ID").child("Code").setValue(mySurvey.getCode());
+            mDatabase.child("ID").child("Date").setValue(mySurvey.getDate());
+            mDatabase.child("ID").child("Code").setValue(mySurvey.getCode());
 
-        mDatabase.child("Mental").child("Stress").setValue(mySurvey.get_stress());
-        mDatabase.child("Mental").child("Anxiety").setValue(mySurvey.get_anxiety());
-        mDatabase.child("Mental").child("Worried_Future").setValue(mySurvey.get_depressed());
-        mDatabase.child("Mental").child("Depressed").setValue(mySurvey.get_worried_future());
-       // mDatabase.child("Mental").child("Overworked").setValue(mySurvey.get_overworked());
-        mDatabase.child("Mental").child("Overworked").child("Hours Worked").setValue(mySurvey.get_hours_work());
-        //mDatabase.child("Mental").child("Tired").setValue(mySurvey.get_tired());
-        mDatabase.child("Mental").child("Tired").child("Hours Sleep").setValue(mySurvey.get_hours_sleep());
-        mDatabase.child("Mental").child("Tired").child("Hours Class Sleep").setValue(mySurvey.get_asleep_class());
-        mDatabase.child("Mental").child("Tired").child("All Nighters").setValue(mySurvey.get_all_nighters());
+            mDatabase.child("Mental").child("Stress").setValue(mySurvey.get_stress());
+            mDatabase.child("Mental").child("Anxiety").setValue(mySurvey.get_anxiety());
+            mDatabase.child("Mental").child("Worried_Future").setValue(mySurvey.get_depressed());
+            mDatabase.child("Mental").child("Depressed").setValue(mySurvey.get_worried_future());
+            // mDatabase.child("Mental").child("Overworked").setValue(mySurvey.get_overworked());
+            mDatabase.child("Mental").child("Overworked").child("Hours Worked").setValue(mySurvey.get_hours_work());
+            //mDatabase.child("Mental").child("Tired").setValue(mySurvey.get_tired());
+            mDatabase.child("Mental").child("Tired").child("Hours Sleep").setValue(mySurvey.get_hours_sleep());
+            mDatabase.child("Mental").child("Tired").child("Hours Class Sleep").setValue(mySurvey.get_asleep_class());
+            mDatabase.child("Mental").child("Tired").child("All Nighters").setValue(mySurvey.get_all_nighters());
 
-        //mDatabase.child("Physical").child("Exercise").setValue(mySurvey.get_exercise());
-        mDatabase.child("Physical").child("Exercise").child("Hours Exercise").setValue(mySurvey.get_hours_exercise());
-        mDatabase.child("Physical").child("Exercise").child("Intensity").setValue(mySurvey.get_intensity_exercise());
-        //mDatabase.child("Physical").child("Nutrition").setValue(mySurvey.get_nutrition());
-        mDatabase.child("Physical").child("Nutrition").child("Consistent").setValue(mySurvey.get_nutrition_consistent());
-        //mDatabase.child("Physical").child("Weight Gain").setValue(mySurvey.get_weight_gain());
-        mDatabase.child("Physical").child("Weight Gain").child("Gain Increase").setValue(mySurvey.get_gain_increase());
-        //mDatabase.child("Physical").child("Weight Loss").setValue(mySurvey.get_weight_loss());
-        mDatabase.child("Physical").child("Weight Loss").child("Loss Decrease").setValue(mySurvey.get_loss_decrease());
+            //mDatabase.child("Physical").child("Exercise").setValue(mySurvey.get_exercise());
+            mDatabase.child("Physical").child("Exercise").child("Hours Exercise").setValue(mySurvey.get_hours_exercise());
+            mDatabase.child("Physical").child("Exercise").child("Intensity").setValue(mySurvey.get_intensity_exercise());
+            //mDatabase.child("Physical").child("Nutrition").setValue(mySurvey.get_nutrition());
+            mDatabase.child("Physical").child("Nutrition").child("Consistent").setValue(mySurvey.get_nutrition_consistent());
+            //mDatabase.child("Physical").child("Weight Gain").setValue(mySurvey.get_weight_gain());
+            mDatabase.child("Physical").child("Weight Gain").child("Gain Increase").setValue(mySurvey.get_gain_increase());
+            //mDatabase.child("Physical").child("Weight Loss").setValue(mySurvey.get_weight_loss());
+            mDatabase.child("Physical").child("Weight Loss").child("Loss Decrease").setValue(mySurvey.get_loss_decrease());
 
-        //mDatabase.child("Social").child("Relationships").setValue(mySurvey.get_relationship_issues());
-        mDatabase.child("Social").child("Relationships").child("Stability").setValue(mySurvey.get_relationship_stability());
-        mDatabase.child("Social").child("Chill Time").setValue(mySurvey.get_hanging_time());
-        mDatabase.child("Social").child("Hobbies Time").setValue(mySurvey.get_hobbies_time());
+            //mDatabase.child("Social").child("Relationships").setValue(mySurvey.get_relationship_issues());
+            mDatabase.child("Social").child("Relationships").child("Stability").setValue(mySurvey.get_relationship_stability());
+            mDatabase.child("Social").child("Chill Time").setValue(mySurvey.get_hanging_time());
+            mDatabase.child("Social").child("Hobbies Time").setValue(mySurvey.get_hobbies_time());
 
-        mDatabase.child("Academic").child("Class Interest").setValue(mySurvey.get_class_interest());
-        mDatabase.child("Academic").child("Class Learning").setValue(mySurvey.get_learning_importance());
-        //mDatabase.child("Academic").child("Class Struggling").setValue(mySurvey.get_learning_struggle());
-        mDatabase.child("Academic").child("Class Struggling").child("Difficulty").setValue(mySurvey.get_class_difficulty());
-        mDatabase.child("Academic").child("Class Struggling").child("Speed").setValue(mySurvey.get_class_speed());
-        mDatabase.child("Academic").child("Class Work").setValue(mySurvey.get_hours_per_week());
+            mDatabase.child("Academic").child("Class Interest").setValue(mySurvey.get_class_interest());
+            mDatabase.child("Academic").child("Class Learning").setValue(mySurvey.get_learning_importance());
+            //mDatabase.child("Academic").child("Class Struggling").setValue(mySurvey.get_learning_struggle());
+            mDatabase.child("Academic").child("Class Struggling").child("Difficulty").setValue(mySurvey.get_class_difficulty());
+            mDatabase.child("Academic").child("Class Struggling").child("Speed").setValue(mySurvey.get_class_speed());
+            mDatabase.child("Academic").child("Class Work").setValue(mySurvey.get_hours_per_week());
+        }
     }
 
     @Override
