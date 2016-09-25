@@ -26,7 +26,7 @@ public class Scrolling extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-        setTitle("Class: " + AddClass.message1);
+        setTitle("Class: " + MainActivity.message1);
 
         setContentView(R.layout.activity_scrolling);
 

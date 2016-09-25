@@ -29,7 +29,7 @@ public class FullscreenActivity extends AppCompatActivity {
         button.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View v){
-                Intent intent = new Intent(FullscreenActivity.this,AddClass.class);
+                Intent intent = new Intent(FullscreenActivity.this,MainActivity.class);
                 startActivity(intent);
             }
         });
