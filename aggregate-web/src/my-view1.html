@@ -1,0 +1,141 @@
+<!--
+@license
+Copyright (c) 2016 The Polymer Project Authors. All rights reserved.
+This code may only be used under the BSD style license found at http://polymer.github.io/LICENSE.txt
+The complete set of authors may be found at http://polymer.github.io/AUTHORS.txt
+The complete set of contributors may be found at http://polymer.github.io/CONTRIBUTORS.txt
+Code distributed by Google as part of the polymer project is also
+subject to an additional IP rights grant found at http://polymer.github.io/PATENTS.txt
+-->
+<link rel="import" href="../bower_components/polymer/polymer.html">
+<link rel="import" href="shared-styles.html">
+<link rel="import" href="../bower_components/paper-slider/paper-slider.html">
+<link rel="import" href="../bower_components/google-chart/google-chart.html">
+
+
+<dom-module id="my-view1">
+  <template>
+    <style include="shared-styles">
+      :host {
+        display: block;
+
+        padding: 10px;
+      }
+
+      .smaller_image{
+        width: 100px;
+      }
+
+      .longer_bar{
+        width: 900px;
+      }
+
+      .white{
+        background-color: #ffffff;
+      }
+
+      .alice_blue{
+        background-color: #e4f1fe;
+      }
+
+      .humming_bird{
+        background-color: #c5eff7;
+      }
+
+      .curious_blue{
+        background-color: #3498db;
+      }
+
+      .san_marino{
+        background-color: #446cb3;
+      }
+/*
+<img class="smaller_image" src="http://previews.123rf.com/images/jroblesart/jroblesart1406/jroblesart140600034/29236475-Cartoon-Brain-Pink-Red-Stock-Vector-brain.jpg">*/
+    </style>
+
+    <div class="card">
+      <div><img class="smaller_image" src="../images/LOGO HIGH RES.png"></div>
+      <h1>Mental Data</h1>
+      <p>This is the metric page for mental wellbeing data</p>
+      <div id="chart_divM" style="width:900px; height:500px;"></div>
+      <div>Time Range: Week 1 - <span id="rangeMLabel" class="caption"></span></div><br>
+      <paper-slider class="longer_bar" id="rangeM" pin snaps max="26" max-markers="26" step="1" min="1" value="10" editable></paper-slider>
+    </div>
+  </template>
+
+  <script>
+    Polymer({
+      is: 'my-view1'
+    });
+  </script>
+
+
+    <script type="text/javascript">
+      var rangeMVal = 10;
+
+      google.charts.load("current", {packages:["corechart"]});
+      google.charts.setOnLoadCallback(drawChart);
+    
+      function drawChart() {
+        var data = [
+          ['Week', 'Concern Level'],
+            [1,  1.33],
+            [2,  4.13],
+            [3,  1.55],
+            [4,  4],
+            [5,  4],
+            [6,  3],
+            [7,  4.1],
+            [8,  4],
+            [9,  3],
+            [10,  2.5],
+            [11,  3],
+            [12,  4],
+            [13,  2.5],
+            [14,  3],
+            [15,  4.1],
+            [16,  4]
+        ];
+
+        var outOfRageData = [];
+
+        var options = {
+          legend: 'none',
+          hAxis: { minValue: 1, maxValue: rangeMVal},
+          curveType: 'function',
+          pointSize: 10,
+        };
+
+        var chartM = new google.visualization.LineChart(document.getElementById('chart_divM'));
+        chartM.draw(google.visualization.arrayToDataTable(data), options);
+
+    var rangeM = document.querySelector('#rangeM');
+    rangeM.addEventListener('value-change', function() {
+        document.querySelector('#rangeMLabel').textContent = rangeM.value;
+        rangeMVal = rangeM.value;
+        options.hAxis.maxValue = rangeMVal;
+        data.forEach(function(dat, i) {
+          if(i == 0) return;
+
+          if(dat[0] > rangeMVal) {
+            outOfRageData.push(dat);
+            data.splice(i, 1);
+          }
+        });
+
+        outOfRageData.forEach(function(dat, i) {
+          if(dat[0] <= rangeMVal) {
+            data.push(dat)
+            outOfRageData.splice(i, 1)
+          }
+        //data.sort(function(a, b){return a-b});
+        });
+
+
+        chartM.draw(google.visualization.arrayToDataTable(data), options);
+        console.log(rangeMVal);
+    });
+    }
+    </script>
+
+</dom-module>

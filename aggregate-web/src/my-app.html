@@ -1,0 +1,215 @@
+<!--
+@license
+Copyright (c) 2016 The Polymer Project Authors. All rights reserved.
+This code may only be used under the BSD style license found at http://polymer.github.io/LICENSE.txt
+The complete set of authors may be found at http://polymer.github.io/AUTHORS.txt
+The complete set of contributors may be found at http://polymer.github.io/CONTRIBUTORS.txt
+Code distributed by Google as part of the polymer project is also
+subject to an additional IP rights grant found at http://polymer.github.io/PATENTS.txt
+-->
+
+<link rel="import" href="../bower_components/polymer/polymer.html">
+<link rel="import" href="../bower_components/app-layout/app-drawer/app-drawer.html">
+<link rel="import" href="../bower_components/app-layout/app-drawer-layout/app-drawer-layout.html">
+<link rel="import" href="../bower_components/app-layout/app-header/app-header.html">
+<link rel="import" href="../bower_components/app-layout/app-header-layout/app-header-layout.html">
+<link rel="import" href="../bower_components/app-layout/app-scroll-effects/app-scroll-effects.html">
+<link rel="import" href="../bower_components/app-layout/app-toolbar/app-toolbar.html">
+<link rel="import" href="../bower_components/app-route/app-location.html">
+<link rel="import" href="../bower_components/app-route/app-route.html">
+<link rel="import" href="../bower_components/iron-pages/iron-pages.html">
+<link rel="import" href="../bower_components/iron-selector/iron-selector.html">
+<link rel="import" href="../bower_components/paper-icon-button/paper-icon-button.html">
+<link rel="import" href="my-icons.html">
+<link rel="import" href="../bower_components/google-signin/google-signin.html">
+<link rel="import" href="../bower_components/paper-ripple/paper-ripple.html">
+<link rel="import" href="../bower_components/paper-slider/paper-slider.html">
+<link rel="import" href="../bower_components/google-chart/google-chart.html">
+<link rel="import" href="../bower_components/paper-dropdown-menu/paper-dropdown-menu.html">
+
+<dom-module id="my-app">
+  <template>
+    <style>
+      :host {
+        --app-primary-color: #4285f4;
+        --app-secondary-color: black;
+
+        display: block;
+      }
+
+      app-header {
+        color: #fff;
+        background-color: var(--app-primary-color);
+      }
+      app-header paper-icon-button {
+        --paper-icon-button-ink-color: white;
+      }
+
+      .drawer-list {
+        margin: 0 20px;
+      }
+
+      .drawer-list a {
+        display: block;
+
+        padding: 0 16px;
+
+        text-decoration: none;
+
+        color: var(--app-secondary-color);
+
+        line-height: 40px;
+      }
+
+      .drawer-list a.iron-selected {
+        color: black;
+
+        font-weight: bold;
+      }
+
+      .font{
+        font: sans-bold;
+      }
+
+      .smaller_image{
+        width:100px;
+      }
+
+      .smallish_image{
+        width:200px;
+      }
+
+      .move_up{
+        margin:-30px;
+      }
+
+      .center_image{
+        
+      }
+
+      .blue {
+        color: #4285f4;
+      }
+
+      .teal {
+        color: #42a5f4;
+      }
+
+      .white{
+        background-color: #ffffff;
+      }
+
+      .humming_bird{
+        background-color: #c5eff7;
+      }
+
+      .alice_blue{
+        background-color: #e4f1fe;
+      }
+
+      .curious_blue{
+        background-color: #3498db;
+      }
+
+      .san_marino{
+        background-color: #446cb3;
+      }
+
+    paper-dropdown-menu {
+      width: 200px;
+      margin-right: 200px;
+    }
+
+    </style>
+
+    <app-location route="{{route}}"></app-location>
+    <app-route
+        route="{{route}}"
+        pattern="/:page"
+        data="{{routeData}}"
+        tail="{{subroute}}"></app-route>
+
+    <app-drawer-layout class="humming_bird" fullbleed>
+      <!-- Drawer content -->
+      <app-drawer>
+        <app-toolbar class="white"> Data Categories:</app-toolbar>
+        <iron-selector selected="[[page]]" attr-for-selected="name" class="drawer-list alice_blue" role="navigation">
+          <a name="view1" href="/view1"><img class="smaller_image" src="../images/Mental Icon.png" hspace="60"><paper-ripple class="teal"></paper-ripple></a>
+          <a name="view2" href="/view2"><img class="smaller_image" src="../images/Physical Icon.png" hspace="60"><paper-ripple class="teal"></paper-ripple></a>
+          <a name="view3" href="/view3"><img class="smaller_image" src="../images/Social.png" hspace="60"><paper-ripple class="teal"></paper-ripple></a>
+          <a name="view4" href="/view4"><img class="smaller_image" src="../images/Academic.png" hspace="60"><paper-ripple class="teal"></paper-ripple></a>
+        </iron-selector>
+      </app-drawer>
+
+      <!-- Main content -->
+      <app-header-layout has-scrolling-region>
+
+        <app-header class="alice_blue" condenses reveals effects="waterfall">
+          <app-toolbar>
+            <paper-icon-button icon="menu" drawer-toggle></paper-icon-button>
+            <div main-title><img class="smallish_image" src="../images/LOGO TEXT.png"></div>
+        
+<!--         <div class="vertical-section-container centered">
+        <paper-dropdown-menu label="Groups:">
+          <paper-listbox class="dropdown-content">
+            <paper-item class="curious_blue">Class 15-112</paper-item>
+            <paper-item>Engineering Department</paper-item>
+            <paper-item>Research Team</paper-item>
+            <paper-item>Mars Crew</paper-item>
+          </paper-listbox>
+        </paper-dropdown-menu>
+        </div> -->
+
+            <div><google-signin brand="google" client-id="1054047045356-j8pgqgls9vdef3rl09hapoicumbte0bo.apps.googleusercontent.com"></google-signin></div>
+            
+          </app-toolbar>
+        </app-header>
+
+        <iron-pages
+            selected="[[page]]"
+            attr-for-selected="name"
+            fallback-selection="view404"
+            role="main">
+          <my-view1 name="view1"></my-view1>
+          <my-view2 name="view2"></my-view2>
+          <my-view3 name="view3"></my-view3>
+          <my-view4 name="view4"></my-view4>
+          <my-view404 name="view404"></my-view404>
+        </iron-pages>
+      </app-header-layout>
+    </app-drawer-layout>
+  </template>
+
+  <script>
+    Polymer({
+      is: 'my-app',
+
+      properties: {
+        page: {
+          type: String,
+          reflectToAttribute: true,
+          observer: '_pageChanged'
+        }
+      },
+
+      observers: [
+        '_routePageChanged(routeData.page)'
+      ],
+
+      _routePageChanged: function(page) {
+        this.page = page || 'view1';
+      },
+
+      _pageChanged: function(page) {
+        // Load page import on demand. Show 404 page if fails
+        var resolvedPageUrl = this.resolveUrl('my-' + page + '.html');
+        this.importHref(resolvedPageUrl, null, this._showPage404, true);
+      },
+
+      _showPage404: function() {
+        this.page = 'view404';
+      }
+    });
+  </script>
+
+</dom-module>
