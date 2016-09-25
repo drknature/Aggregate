@@ -33,7 +33,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textAppearance="?android:attr/textAppearanceMedium"
-            android:text="15-112"
+            android:text=""
             android:id="@+id/class1"
             android:layout_centerHorizontal="true"
             android:layout_marginTop="40dp"
@@ -46,14 +46,6 @@
             android:layout_height="wrap_content"
             android:id="@+id/listView"
             android:layout_below="@+id/class1"
-            android:layout_centerHorizontal="true" />
-
-        <ImageView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:id="@+id/plus1"
-            android:src="@drawable/addclass"
-            android:layout_alignTop="@+id/listView"
             android:layout_centerHorizontal="true" />
 
 </RelativeLayout>

@@ -221,6 +221,69 @@ public class ScreenSlidePageFragment extends Fragment {
                     public void onProgressChanged(SeekBar seekBar, int progress, boolean fromUser) {
                         progressed = progress;
                         scale.setText(progress + "/" + seek.getMax());
+                        if(mPageNumber == 0) {
+                            MainActivity.mySurvey.set_stress(progressed);
+                        }
+                        if(mPageNumber == 1) {
+                            MainActivity.mySurvey.set_anxiety(progressed);
+                        }
+                        if(mPageNumber == 2) {
+                            MainActivity.mySurvey.set_worried_future(progressed);
+                        }
+                        if(mPageNumber == 3) {
+                            MainActivity.mySurvey.set_depressed(progressed);
+                        }
+                        if(mPageNumber == 4) {
+                            MainActivity.mySurvey.set_hours_work(progressed);
+                        }
+                        if(mPageNumber == 5) {
+                            MainActivity.mySurvey.set_hours_sleep(progressed);
+                        }
+                        if(mPageNumber == 6) {
+                            MainActivity.mySurvey.set_asleep_class(progressed);
+                        }
+                        if(mPageNumber == 7) {
+                            MainActivity.mySurvey.set_all_nighters(progressed);
+                        }
+                        if(mPageNumber == 8) {
+                            MainActivity.mySurvey.set_hours_exercise(progressed);
+                        }
+                        if(mPageNumber == 9) {
+                            MainActivity.mySurvey.set_intensity_exercise(progressed);
+                        }
+                        if(mPageNumber == 10) {
+                            MainActivity.mySurvey.set_nutrition_consistent(progressed);
+                        }
+                        if(mPageNumber == 11) {
+                            MainActivity.mySurvey.set_gain_increase(progressed);
+                        }
+                        if(mPageNumber == 12) {
+                            MainActivity.mySurvey.set_loss_decrease(progressed);
+                        }
+                        if(mPageNumber == 13) {
+                            MainActivity.mySurvey.set_relationship_stability(progressed);
+                        }
+                        if(mPageNumber == 14) {
+                            MainActivity.mySurvey.set_hanging_time(progressed);
+                        }
+                        if(mPageNumber == 15) {
+                            MainActivity.mySurvey.set_hobbies_time(progressed);
+                        }
+                        if(mPageNumber == 16) {
+                            MainActivity.mySurvey.set_class_interest(progressed);
+                        }
+                        if(mPageNumber == 17) {
+                            MainActivity.mySurvey.set_learning_importance(progressed);
+                        }
+                        if(mPageNumber == 18) {
+                            MainActivity.mySurvey.set_class_difficulty(progressed);
+                        }
+                        if(mPageNumber == 19) {
+                            MainActivity.mySurvey.set_class_speed(progressed);
+                        }
+                        if(mPageNumber == 20) {
+                            MainActivity.mySurvey.set_hours_per_week(progressed);
+                        }
                     }
 
                     @Override
