@@ -306,7 +306,7 @@ public class ScreenSlidePageFragment extends Fragment {
                         scale.setText(progress + "/" + seek.getMax());
 
                         if (mPageNumber == 0 || mPageNumber == 1 || mPageNumber == 2 || mPageNumber == 3 ||
-                                mPageNumber == 4 || mPageNumber == 5 || mPageNumber == 6 || mPageNumber == 7 || mPageNumber == 7
+                                mPageNumber == 4 || mPageNumber == 5 || mPageNumber == 6 || mPageNumber == 7 || mPageNumber == 8
                                 || mPageNumber == 7 || mPageNumber == 9 || mPageNumber == 10 || mPageNumber == 13 || mPageNumber == 16 ||
                                 mPageNumber == 18 || mPageNumber == 20 ) {
 
